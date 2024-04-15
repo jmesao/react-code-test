@@ -1,0 +1,54 @@
+{
+    "parser": "@typescript-eslint/parser",
+    "extends": [
+        "eslint:recommended",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:react/recommended",
+        "plugin:react-hooks/recommended",
+        "plugin:import/errors",
+        "plugin:import/warnings",
+        "plugin:jsx-a11y/recommended",
+        "plugin:import/typescript",
+        "prettier"
+    ],
+    "plugins": ["@typescript-eslint", "react", "react-hooks", "import", "jsx-a11y"],
+    "rules": {
+        "react/prop-types": "off",
+        "react/react-in-jsx-scope": "off"
+    },
+    "settings": {
+        "react": {
+            "version": "detect"
+        },
+        "import/resolver": {
+            "alias": {
+                "map": [
+                    ["@src", "./src"]
+                ],
+                "extensions": [".js", ".jsx", ".ts", ".tsx"]
+            }
+        }
+    },
+    "ignorePatterns": ["enums/", "postcss.config.js", "tailwind.config.js", "graphql.ts", "vite.config.ts", "codegen.ts"],
+    "overrides": [
+        {
+            "files": ["src/**/*.ts", "src/**/*.tsx"],
+            "extends": ["eslint:recommended", "plugin:react/recommended", "plugin:react-hooks/recommended", "plugin:import/errors", "plugin:import/warnings", "plugin:jsx-a11y/recommended", "prettier"],
+            "plugins": ["react", "react-hooks", "import", "jsx-a11y"],
+            "rules": {
+                "react/prop-types": "off",
+                "react/react-in-jsx-scope": "off",
+                "semi": ["error", "always"]
+            },
+            "settings": {
+                "react": {
+                    "version": "detect"
+                }
+            }
+        }
+    ],
+    "env": {
+        "browser": true
+    }
+}
+  
