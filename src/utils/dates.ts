@@ -2,12 +2,12 @@ export const formatToDateString = (
   releaseDate: string | undefined,
   language?: string,
 ): string => {
-  if (!releaseDate) return "";
+  if (!releaseDate) return '';
 
   const options: Intl.DateTimeFormatOptions = {
-    year: "numeric",
-    month: "long",
-    day: "numeric",
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
   };
 
   const locale = language || navigator.language;

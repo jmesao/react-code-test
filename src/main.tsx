@@ -1,27 +1,27 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
-import { createClient, Provider } from "urql";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import PersonPage from "./pages/PersonPage";
-import HomePage from "./pages/HomePage";
-import "./index.css";
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import { createClient, Provider } from 'urql';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import PersonPage from './pages/PersonPage';
+import HomePage from './pages/HomePage';
+import './index.css';
 
 const client = createClient({
-  url: "https://swapi-graphql.netlify.app/.netlify/functions/index",
+  url: 'https://swapi-graphql.netlify.app/.netlify/functions/index',
 });
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: '/',
     element: <HomePage />,
   },
   {
-    path: "/person/:personId",
+    path: '/person/:personId',
     element: <PersonPage />,
   },
 ]);
 
-ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
+ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
     <Provider value={client}>
       <RouterProvider router={router} />

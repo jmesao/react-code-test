@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 
 interface NavLinkProps {
   path: string;
@@ -7,8 +7,8 @@ interface NavLinkProps {
 
 const NavLink = ({ path, text }: NavLinkProps) => {
   return (
-    <div className="absolute top-0 left-0 m-4">
-      <Link className="text-lightBlue underline" to={path}>
+    <div className='absolute top-0 left-0 m-4'>
+      <Link className='text-lightBlue underline' to={path}>
         {text}
       </Link>
     </div>

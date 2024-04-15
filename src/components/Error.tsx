@@ -9,7 +9,7 @@ const ErrorData = ({ isError, text }: ErrorDataProps) => {
   }
 
   return (
-    <div className="text-center text-red-500 font-bold">
+    <div className='text-center text-red-500 font-bold'>
       <p>{text}</p>
     </div>
   );

@@ -10,7 +10,7 @@ const Loading = ({ isLoading, text }: LoadingProps) => {
 
   return (
     <div>
-      <p className="text-center text-offWhite font-bold">{text}</p>
+      <p className='text-center text-offWhite font-bold'>{text}</p>
     </div>
   );
 };
